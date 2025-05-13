@@ -18,7 +18,7 @@ The `ModelCoeff` folder contains the precomputed weights to predict DNA methylat
 ```
 - **Probe:** The CpG to be predicted.
 - **snp:** The SNP used as predictor.
-- **Effect:** .`b_average` is the effect size to be applied on the original genotype `SNP_j`
+- **Effect:** .`b_average` is the effect size to be applied on the original genotype $`SNP_j`$
 
 ### Compute your own predictive models
 
