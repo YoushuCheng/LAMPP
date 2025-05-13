@@ -1,7 +1,7 @@
 # LAMPP
 Incorporate local ancestry information to predict genetically associated CpG methylation in admixed populations
 
-<img src="img/F1.pdf">
+<pdf src="img/F1.pdf">
 
 ## Tutorial
 ### Use pre-computed predictive models
