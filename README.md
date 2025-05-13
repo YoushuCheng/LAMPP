@@ -1,6 +1,7 @@
 # LAMPP
 Incorporate local ancestry information to predict genetically associated CpG methylation in admixed populations
 
+## Workflow
 <img src="img/F1.png">
 
 ## Tutorial
@@ -18,7 +19,8 @@ The `ModelCoeff` folder contains the precomputed weights to predict DNA methylat
 ```
 - **Probe:** The CpG to be predicted.
 - **snp:** The SNP used as predictor.
-- **Effect:** `b_average` is the effect size to be applied on the original genotype $`SNP_j`$ (equivalent to $`SNP_{j,AFR}+SNP_{j,EUR}`$). `b_diff` is the effect size to be applied on the difference between the AFR and EUR genotype $`\frac{SNP_{j,AFR}-SNP_{j,EUR}}{2}`$. 
-
+- **Effect:** `b_average` indicates the effect size is to be applied on the original genotype $`SNP_j`$ (also equivalent to $`SNP_{j,AFR}+SNP_{j,EUR}`$). `b_diff` indicates the effect size is to be applied on the difference between the AFR and EUR genotype $`\frac{SNP_{j,AFR}-SNP_{j,EUR}}{2}`$.  $`SNP_{j,AFR}`$ and $`SNP_{j,EUR}`$ can be obtained by incorporating local ancestry and dissecting the original genotype into two ancestries (details in the workflow). 
+- **Coeff:** The corresponding effect sizes.
+- 
 ### Compute your own predictive models
 
