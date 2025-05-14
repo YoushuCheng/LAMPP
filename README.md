@@ -46,7 +46,30 @@ The `ModelCoeff` folder contains the precomputed weights to predict DNA methylat
 ```
 Rscript LAMPP.r /gpfs/gibbs/pi/zhao/yc769/MethylPred/LAMPP/example/test_pheno.txt /gpfs/ycga/project/xu_ke/yc769/MethylPred/LA/result/VACS_seq_chr22_AFR.RData /gpfs/ycga/project/xu_ke/yc769/MethylPred/LA/result/VACS_seq_chr22_EUR.RData seq ./oc1.txt \
 threshold=0.005
-
-Rscript HBI.R [file for phenotype/DNA methylation] [Phenotype/CpG name] [file for genotype] [file for cell type proportions] [file for covariates] [path for outputs] \
-distance=500000
+```
+- **file for phenotype/DNA methylation:** 
+```
+    ID Methy_count Unmethy_count     betaM                     cpg position
+1 id_1          24             1 0.9600000 chr22_17564995_17564995 17564995
+2 id_2          50             4 0.9259259 chr22_17564995_17564995 17564995
+3 id_3          41             9 0.8200000 chr22_17564995_17564995 17564995
+4 id_4          63             6 0.9130435 chr22_17564995_17564995 17564995
+5 id_5          33             5 0.8684211 chr22_17564995_17564995 17564995
+6 id_6          23             5 0.8214286 chr22_17564995_17564995 17564995
+...
+```
+- **file for genotype:**
+```
+   chr       bp         snp ref alt id_1 id_2 id_3 id_4 id_5
+1   22 16849681 rs111636391   G   C    0    1    1    0    0
+2   22 16850115   rs5747996   C   T    0    1    1    0    0
+3   22 16850297   rs7285252   C   T    0    1    1    0    0
+4   22 16850437   rs5748209   G   A    0    1    1    0    0
+5   22 16852914  rs77993021   G   A    0    1    1    0    0
+6   22 16853178 rs111273033   C   T    0    1    1    0    0
+7   22 16853232 rs112102661   G   A    0    1    1    0    0
+8   22 16853625  rs28858177   A   C    0    1    1    0    0
+9   22 16855618   rs5747010   G   A    0    1    1    0    0
+10  22 16855731   rs5748914   G   C    0    1    1    0    0
+...
 ```
