@@ -43,4 +43,9 @@ The `ModelCoeff` folder contains the precomputed weights to predict DNA methylat
 - **coefficient:** The corresponding effect sizes.
 
 ### Compute your own predictive models
+```
+Rscript LAMPP.r /gpfs/gibbs/pi/zhao/yc769/MethylPred/LAMPP/example/test_pheno.txt /gpfs/ycga/project/xu_ke/yc769/MethylPred/LA/result/VACS_seq_chr22_AFR.RData /gpfs/ycga/project/xu_ke/yc769/MethylPred/LA/result/VACS_seq_chr22_EUR.RData seq ./oc1.txt \threshold=0.005
 
+Rscript HBI.R [file for phenotype/DNA methylation] [Phenotype/CpG name] [file for genotype] [file for cell type proportions] [file for covariates] [path for outputs] \
+distance=500000
+```
