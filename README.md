@@ -33,8 +33,10 @@ The `ModelCoeff` folder contains the precomputed weights to predict DNA methylat
 - **coefficient:** The corresponding effect sizes.
 
 ### Compute your own predictive models
+The script `LAMPP.r` for computing methylation weights works one CpG at a time. The required inputs include the methylation of the CpG as the phenotype, the dissected genotype for two ancestry groups (i.e., $`SNP_{j,AFR}`$ and $`SNP_{j,EUR}`$ ).
+A typical run looks like this:
 ```
-Rscript LAMPP.r /gpfs/gibbs/pi/zhao/yc769/MethylPred/LAMPP/example/test_pheno.txt /gpfs/ycga/project/xu_ke/yc769/MethylPred/LA/result/VACS_seq_chr22_AFR.RData /gpfs/ycga/project/xu_ke/yc769/MethylPred/LA/result/VACS_seq_chr22_EUR.RData seq ./oc1.txt \
+Rscript LAMPP.r [file for phenotype/DNA methylation] [file for SNP_AFR] [file for SNP_AFR] [methylation data format] [path for outputs] \
 threshold=0.005
 ```
 - **file for phenotype/DNA methylation:** 
