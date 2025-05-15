@@ -40,7 +40,7 @@ A typical run looks like this:
 Rscript LAMPP.r [file for phenotype/DNA methylation] [file for SNP_AFR] [file for SNP_AFR] [methylation data format] [path for outputs] \
 threshold=0.005
 ```
-- **file for phenotype/DNA methylation:** 
+- **file for phenotype/DNA methylation:** The first six columns for count data should be `ID`,`Methy_count`, `Unmethy_count`, `betaM`, `cpg`, `position`, representing the individual ID, methylated count, unmethylated count, methylation beta value, the name of the CpG, the position of the CpG. If the methylation is measured using array approach, the columns should be `ID`, `betaM`, `cpg`, `position`. Column names are needed.
 ```
     ID Methy_count Unmethy_count     betaM                     cpg position
 1 id_1          24             1 0.9600000 chr22_17564995_17564995 17564995
@@ -51,7 +51,7 @@ threshold=0.005
 6 id_6          23             5 0.8214286 chr22_17564995_17564995 17564995
 ...
 ```
-- **file for genotype:**
+- **file for SNP_AFR:** The dissected genotype for the AFR ancestry. Each row represent a SNP, and the first five columns should be `chr`,`bp`,`snp`,`ref`,`alt`, the remaining columns represent individuals. Column names are needed.
 ```
    chr       bp         snp ref alt id_1 id_2 id_3 id_4 id_5
 1   22 16849681 rs111636391   G   C    0    1    1    0    0
@@ -62,3 +62,6 @@ threshold=0.005
 6   22 16853178 rs111273033   C   T    0    1    1    0    0
 ...
 ```
+- **file for SNP_EUR:** The dissected genotype for the EUR ancestry. The same format as SNP_AFR. 
+
+
