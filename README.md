@@ -63,5 +63,6 @@ threshold=0.005
 ...
 ```
 - **file for SNP_EUR:** The dissected genotype for the EUR ancestry. The same format as SNP_AFR. 
-
-
+- **methylation data format:** `seq` or `array`. `seq` indicates the phenotype/DNA methylation is in count format, `array` indicates the phenotype/DNA methylation only has beta-value.
+- **path for outputs:** For example, `/Mypath/model.txt`.
+- **Optional arguments:** `threshold` specifies the p-value threshold used in the preselection step to determine whether a SNP has local ancestry specific effects, and the default value is 0.005, which is the optimal value selected in our manuscript.
